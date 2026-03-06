@@ -183,7 +183,7 @@ def main():
     configure_logger(
         debug=parse_bool(os.getenv("DEBUG", "")),
         secrets=[
-            os.getenv("TOKEN", ""),
+            # os.getenv("TOKEN", ""),
             os.getenv("BARK_DEVICE_KEY", ""),
             os.getenv("BARK_SERVER_URL", ""),
             os.getenv("SERVER3_SEND_KEY", ""),
