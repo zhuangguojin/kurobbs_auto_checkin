@@ -38,19 +38,30 @@ class KurobbsClient:
         self.session = requests.Session()
         self.session.headers.update(
             {
-                "osversion": "Android",
-                "devcode": "2fba3859fe9bfe9099f2696b8648c2c6",
-                "countrycode": "CN",
-                "ip": "10.0.2.233",
-                "model": "2211133C",
-                "source": "android",
-                "lang": "zh-Hans",
-                "version": "1.0.9",
-                "versioncode": "1090",
+                "accept": "application/json, text/plain, */*",
+                "accept-encoding": "gzip, deflate, br, zstd",
+                "connection": "keep-alive",
+                "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
+                "devcode": "RqDUddND20wyGE4NzdwD90BQNwx3GPwk",
+                "source": "h5",
                 "token": self.token,
-                "content-type": "application/x-www-form-urlencoded; charset=utf-8",
-                "accept-encoding": "gzip",
-                "user-agent": "okhttp/3.10.0",
+                "version": "2.10.5",
+                
+
+                
+                # "osversion": "Android",
+                # "devcode": "2fba3859fe9bfe9099f2696b8648c2c6",
+                # "countrycode": "CN",
+                # "ip": "10.0.2.233",
+                # "model": "2211133C",
+                # "source": "android",
+                # "lang": "zh-Hans",
+                # "version": "1.0.9",
+                # "versioncode": "1090",
+                # "token": self.token,
+                # "content-type": "application/x-www-form-urlencoded; charset=utf-8",
+                # "accept-encoding": "gzip",
+                # "user-agent": "okhttp/3.10.0",
             }
         )
         self.result: Dict[str, str] = {}
@@ -183,7 +194,7 @@ def main():
     configure_logger(
         debug=parse_bool(os.getenv("DEBUG", "")),
         secrets=[
-            # os.getenv("TOKEN", ""),
+            os.getenv("TOKEN", ""),
             os.getenv("BARK_DEVICE_KEY", ""),
             os.getenv("BARK_SERVER_URL", ""),
             os.getenv("SERVER3_SEND_KEY", ""),
