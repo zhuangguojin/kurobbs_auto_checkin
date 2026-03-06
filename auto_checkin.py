@@ -70,23 +70,21 @@ class KurobbsClient:
     def _post(self, url: str, data: Dict[str, Any]) -> Response:
         """Make a POST request to the specified URL with the given data."""
 
-        """
-        logger.debug("===== 请求开始 =====")
-        logger.debug(f"请求URL: {url}")
-        logger.debug(f"请求入参(data): {data}")
-        logger.debug(f"请求头(headers): {dict(self.session.headers)}")
-        logger.debug(f"使用的Token: {self.token}")
-        """
+
+        # logger.debug("===== 请求开始 =====")
+        # logger.debug(f"请求URL: {url}")
+        # logger.debug(f"请求入参(data): {data}")
+        # logger.debug(f"请求头(headers): {dict(self.session.headers)}")
+        # logger.debug(f"使用的Token: {self.token}")
+
 
         
         try:
             response = self.session.post(url, data=data, timeout=15)
 
-            """
-            logger.debug(f"HTTP状态码: {response.status_code}")
-            logger.debug(f"响应头: {dict(response.headers)}")
-            logger.debug(f"响应原始内容: {response.text}")
-            """
+            # logger.debug(f"HTTP状态码: {response.status_code}")
+            # logger.debug(f"响应头: {dict(response.headers)}")
+            # logger.debug(f"响应原始内容: {response.text}")
 
             
             
