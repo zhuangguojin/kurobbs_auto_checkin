@@ -70,11 +70,12 @@ class KurobbsClient:
             raise KurobbsClientException(f"Failed to parse response from {url}") from exc
 
         logger.debug(
-            "POST {} -> code={}, success={}, msg={}",
+            "POST {} -> code={}, success={}, msg={}, self.session={}",
             url,
             res.code,
             res.success,
             res.msg,
+            self.session,
         )
         return res
 
